@@ -84,7 +84,7 @@ console.log(`Suspect three is ${suspectThree}.`);
 
 **Answer:**
 `console.log(suspects)`: *Miss Scarlet, Professor Plum, Colonel Mustard*. Local `suspectThree` hides outer `suspectThree` scope.
-`console.log(`Suspect three is ${suspectThree}.`)`: *Mrs. Peacock*. Outer `suspectThree` scope still applies.
+```console.log(`Suspect three is ${suspectThree}.`)```: *Mrs. Peacock*. Outer `suspectThree` scope still applies.
 
 ---
 #### Episode 5
