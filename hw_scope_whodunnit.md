@@ -37,9 +37,11 @@ changeMurderer();
 const verdict = declareMurderer();
 console.log(verdict);
 ```
+
 **Answer:**
 `verdict`:*Professor Plum*. Can't reassign to const variable in `changeMurderer()` 
 (I got this wrong initially - forgot about the const)
+
 ---
 #### Episode 3
 
@@ -57,9 +59,11 @@ console.log('First Verdict: ', firstVerdict);
 const secondVerdict = `The murderer is ${murderer}.`;
 console.log('Second Verdict: ', secondVerdict);
 ```
+
 **Answer:**
 `firstVerdict`: *Mrs. Peacock*. Local `declareMurderer` hides the outer `murderer` scope inside the function block.
 `secondVerdict`: *Professor Plum*. Outer block scope of `murderer` variable on line 44 still visible here.
+
 ---
 #### Episode 4
 
@@ -77,9 +81,11 @@ const suspects = declareAllSuspects();
 console.log(suspects);
 console.log(`Suspect three is ${suspectThree}.`);
 ```
+
 **Answer:**
 `console.log(suspects)`: *Miss Scarlet, Professor Plum, Colonel Mustard*. Local `suspectThree` hides outer `suspectThree` scope.
 `console.log(`Suspect three is ${suspectThree}.`)`: *Mrs. Peacock*. Outer `suspectThree` scope still applies.
+
 ---
 #### Episode 5
 
@@ -102,8 +108,10 @@ changeWeapon('Revolver');
 const verdict = declareWeapon();
 console.log(verdict);
 ```
+
 **Answer:**
 `console.log(verdict)`: *Revolver*. `const` does not prevent changing an object's values.
+
 ---
 #### Episode 6
 
@@ -128,8 +136,10 @@ changeMurderer();
 const verdict = declareMurderer();
 console.log(verdict);
 ```
+
 **Answer:**
 `console.log(verdict)`: *Mrs. White*. `plotTwist()` changes `murderer` to Mrs. White within the `changeMurderer` scope.
+
 ---
 #### Episode 7
 
@@ -160,8 +170,10 @@ changeMurderer();
 const verdict = declareMurderer();
 console.log(verdict);
 ```
+
 **Answer:**
 `console.log(verdict)`: *Mr. Green*. `unexpectedOutcome()` only changes `murderer` in the `plotTwist()`, and not anywhere else, because `plotTwist()` declared a new local `murderer` variable that hides the outer one.
+
 ---
 #### Episode 8
 
@@ -201,8 +213,10 @@ changeScenario();
 const verdict = declareWeapon();
 console.log(verdict);
 ```
+
 **Answer:**
 `console.log(verdict)`: *Candle stick*. Within the `changeScenario()` scope, the room is 'Dining Room', which changes the murderer to 'Colonel Mustard' inside the `plotTwist()` scope, which in turn changes the weapon to 'Candle stick' in `unexpectedOutcome()`.
+
 ---
 #### Episode 9
 
@@ -220,7 +234,9 @@ const declareMurderer = function() {
 const verdict = declareMurderer();
 console.log(verdict);
 ```
+
 **Answer:**
 `console.log(verdict)`: *Professor Plum*. The if block just declares a new local variable with the same name as the outer variable, and has no effect on 'Professor Plum'.
+
 ---
 
