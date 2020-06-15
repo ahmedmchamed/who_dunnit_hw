@@ -39,7 +39,7 @@ console.log(verdict);
 ```
 
 **Answer:**
-`verdict`:*Professor Plum*. Can't reassign to const variable in `changeMurderer()` 
+`verdict`: *Professor Plum*. Can't reassign to const variable in `changeMurderer()` 
 (I got this wrong initially - forgot about the const)
 
 ---
